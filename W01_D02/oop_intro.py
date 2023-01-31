@@ -14,6 +14,7 @@ student_3 = {
 # - Objects = are instances of a class
 #! Exmaple class: Human
 # ! Objects : Putin Trump
+
 class Student:
     # Constructor
     def __init__(self,fn,ln,a):
@@ -26,7 +27,7 @@ class Student:
     def increase_age(self):
         self.age +=1
         return self
-
+    
     def print_info(self):
         print(f"Student fullname is {self.first_name} {self.last_name} and he is {self.age} old !")
         return self
@@ -34,7 +35,7 @@ class Student:
 john = Student("John","Wick",45)
 # print(john.first_name, john.last_name, john.age)
 
-# - Chaining methods
+# - Chaining methods 
 
 john.increase_age().increase_age().increase_age()
 # print(john.first_name, john.last_name, john.age)

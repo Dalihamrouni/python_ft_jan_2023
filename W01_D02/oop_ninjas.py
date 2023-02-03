@@ -27,11 +27,10 @@ class Ninja:
         cls.dojo = new_dojo
 # - Static Method
     @staticmethod
-    def display_stats(self):
-        print(f"Name = {self.name}")
-        print(f"Health = {self.health}")
-        print(f"Power = {self.power}")
-        return self
+    def display_stats():
+        print(f"Name = {name}")
+        print(f"Health = {health}")
+        print(f"Power = {power}")
 ninja1 = Ninja("Shido", 1,0.9,"black")
 ninja2 = Ninja("Kinji", 0.8,0.5,"yellow")
 # ninja2.display_stats()
@@ -54,6 +53,8 @@ Katana = Weapon({"power":10,"size":"big","type":"Sword"})
 Daito = Weapon({"power":5,"size":"small","type":"Knife"})
 
 # print(Katana.type, Katana.power)
+
+ninja1.display_stats()
 
 ninja1.weapons.append(Katana)
 ninja1.weapons.append(Daito)

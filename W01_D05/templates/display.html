@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='style.css') }}">
+    <script type="text/javascript" src="{{ url_for('static', filename='script.js') }}" defer></script>
+    <title>Display</title>
+</head>
+
+<body>
+    <h1>Dispaly</h1>
+    <h4>UserName : {{session['name']}}</h4>
+    <h4>User Age : {{session.age}}</h4>
+    <h4>Favorite Food : {{session.fav_food}}</h4>
+    <img src="{{ url_for('static', filename='quote.png') }} " width="300">
+    <a href="/clear"> CLEAR SESSION</a>
+</body>
+</html>

@@ -1,0 +1,1 @@
+console.log("Hi form JavaScript 😎")

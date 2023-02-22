@@ -43,12 +43,31 @@ var newInv1 = [
    * @param {Array<Inventory>} currInv
    * @return The currInv after being updated.
    */
-//   function updateInventory(newInv, currInv) {
-
-//     for (var i =0 ;i<newInv.length; i++){
-//         var itemFound = false;
-
-//     }
-//   }
-  
+  function updateInventory(newInv, currInv) {
+    if (currInv == []) {
+      return newInv
+    }
+    else if (newInv == []) {
+      return currInv
+    }
+    else {
+      var expected = {};
+    for (var i = 0; i< currInv.length ; i++) {
+      expected[currInv[i].name] = currInv[i]
+    }
+    for(var i = 0; i<newInv.length ; i++){
+      // console.log(expected.hasOwnProperty(newInv[i].name));
+      if (expected.hasOwnProperty(newInv[i].name)) {
+        // console.log(newInv[i].quantity,"++++++++",expected[newInv[i].name].quantity);
+        newInv[i].quantity += expected[newInv[i].name].quantity
+      }
+      else {
+        continue
+      }
+    }
+    return newInv
+    }
+    
+  }
+  console.log(updateInventory(newInv2,currInv2));
   /*****************************************************************************/

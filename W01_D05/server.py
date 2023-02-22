@@ -10,7 +10,6 @@ def form():
 @app.route('/process', methods=['POST'])
 def process_form():
     print(f"{request.form} ****************")
-
     session['name'] = request.form['username']
     session['age'] = request.form['user_age']
     session['fav_food'] = request.form['fav_food']
